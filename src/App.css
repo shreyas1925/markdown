@@ -18,7 +18,7 @@
 }
 
 .left__window {
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 3px 8px;
 }
 
 .right__window {
@@ -27,7 +27,7 @@
   padding: 1rem;
   font-size: 1.4rem;
   text-transform: capitalize;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
 }
 
 header {
