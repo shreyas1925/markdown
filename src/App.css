@@ -1,38 +1,102 @@
-.App {
-  text-align: center;
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+.main {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: aliceblue;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main__window {
+  height: 75vh;
+  display: grid;
+  grid-template-columns: 600px 600px;
+  grid-template-rows: 700px 700px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.left__window {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.right__window {
+  background-color: #fff;
+  border: 1px solid black;
+  padding: 1rem;
+  font-size: 1.4rem;
+  text-transform: capitalize;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+header {
+  height: 50px;
+  border: 1px solid black;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  cursor: pointer;
+  background-color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.btn {
+  padding: 5px;
+  width: 25%;
+  cursor: pointer;
+}
+textarea {
+  height: 650px;
+  width: 600px;
+  font-size: 1.4rem;
+  text-transform: capitalize;
+  border: 1px solid black;
+  outline: none;
+  padding: 1rem;
+  border-width: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 1240px) {
+  .main__window {
+    height: 75vh;
+    display: grid;
+    grid-template-columns: 400px 400px;
+    grid-template-rows: 700px 700px;
   }
-  to {
-    transform: rotate(360deg);
+  textarea {
+    height: 650px;
+    width: 400px;
+    font-size: 1.4rem;
+    text-transform: capitalize;
+    border: 1px solid black;
+    outline: none;
+    padding: 1rem;
+    border-width: none;
+  }
+}
+
+@media (max-width: 840px) {
+  .main__window {
+    height: 75vh;
+    display: grid;
+    grid-template-columns: 400px;
+    grid-template-rows: 300px 300px;
+    font-size: 0.4rem;
+  }
+  textarea {
+    height: 260px;
+    width: 400px;
+    font-size: 1.4rem;
+    text-transform: capitalize;
+    border: 1px solid black;
+    outline: none;
+    padding: 1rem;
+    border-width: none;
+    margin-bottom: 1rem;
+  }
+  .right__window {
+    margin-top: 1rem;
   }
 }

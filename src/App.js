@@ -1,25 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import ReactMarkdown from "react-markdown";
+import MenuIcon from "@material-ui/icons/Menu";
+import "./App.css";
 
-function App() {
+const App = () => {
+  const [input, setInput] = useState("");
+  const [effect, setEffect] = useState(false);
+
+  const submitEffect = () => {
+    {
+      effect ? setEffect(false) : setEffect(true);
+    }
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="main">
+      <div className="main__window">
+        <div className="left__window">
+          <header>
+            <MenuIcon />
+            <button className="btn" onClick={submitEffect}>
+              Raw
+            </button>
+          </header>
+          <textarea
+            className="left__window"
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+          ></textarea>
+        </div>
+        {effect && (
+          <div className="right__window">
+            <ReactMarkdown>{input}</ReactMarkdown>
+          </div>
+        )}
+      </div>
     </div>
   );
-}
+};
 
 export default App;
